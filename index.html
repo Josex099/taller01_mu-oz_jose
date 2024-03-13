@@ -8,20 +8,42 @@
 </head>
 <body>
     <ul>
-        <li><a href="/pages/inicio.html">Inicio</a></li>
-        <li><a href="#">Canciones</a></li>
-        <li><a href="#">Compositores</a></li>
-        <li><a href="#">Acerca de</a></li>
+        <li><a href="/index.html" class="buttoninicio">Inicio</a></li>
+                
+                <li><a href="/pages/canciones.html" class="buttoninicio">Canciones</a></li>
+                <li><a href="/pages/compositores.html" class="buttoninicio">Compositores</a></li>
+                <li><a href="/pages/acercade.html" class="buttoninicio">Acerca de</a></li>
     </ul>
-    <input type="text" placeholder="Search...">
-    <button class="button">Ingresar</button>
-    <button class="button">Nuevo</button>
+    <input type="text" id="keyword" placeholder="Nombra la seccion">
+    <button class="button" onclick="redirect()">Ingresar</button>
+
+
+    <script>
+        function redirect() {
+            var keyword = document.getElementById("keyword").value.toLowerCase();
+            var routes = {
+                "canciones": "/pages/canciones.html",
+                "compositores": "/pages/compositores.html",
+                "acerca de": "/pages/acercade.html"
+                // Puedes agregar más palabras clave y rutas aquí
+            };
+            var ruta = routes[keyword];
+            if (ruta) {
+                window.location.href = ruta;
+            } else {
+                alert("La palabra clave ingresada no tiene una ruta asociada.");
+            }
+        }
+    </script>
 
     <div class="lyrics">
         <h2>Letras de canciones</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratione nam eius modi at explicabo facilis odit, quia repellendus earum dignissimos praesentium eos quas magni nihil cum? Unde, commodi! Nobis, ipsa.</p>
+        <p>Lyrics a continuacion</p>
+        <h2>Gurenge</h2>
+        <p><p><a href="https://youtu.be/JA1sHzlkcbk?si=N9R9zBm0ZAQDLywP" class="buttonurl">Gurenge-Lisa (Lyrics)</a></p></p>
+        <h2>Chouzetsu Dynamic!</h2>
+        <p><p><a href="https://youtu.be/3z1BG9_L16I?si=ckqieqsjItLooHja" class="buttonurl">Chouzetsu Dynamic! - Chouzetsu Dynamic! (Lyrics)</a></p></p>
     </div>
-    <button class="custom-button">Botón de ejemplo</button>
-    <button class="custom-button">Otro botón</button>
+
 </body>
 </html>
