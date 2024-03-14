@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
     <ul>
-        <li><a href="/index.html" class="buttoninicio">Inicio</a></li>
+        <li><a href="index.html" class="buttoninicio">Inicio</a></li>
                 
-                <li><a href="/pages/canciones.html" class="buttoninicio">Canciones</a></li>
-                <li><a href="/pages/compositores.html" class="buttoninicio">Compositores</a></li>
-                <li><a href="/pages/acercade.html" class="buttoninicio">Acerca de</a></li>
+                <li><a href="pages/canciones.html" class="buttoninicio">Canciones</a></li>
+                <li><a href="pages/compositores.html" class="buttoninicio">Compositores</a></li>
+                <li><a href="pages/acercade.html" class="buttoninicio">Acerca de</a></li>
     </ul>
     <input type="text" id="keyword" placeholder="Nombra la seccion">
     <button class="button" onclick="redirect()">Ingresar</button>
@@ -25,7 +25,7 @@
                 "canciones": "/pages/canciones.html",
                 "compositores": "/pages/compositores.html",
                 "acerca de": "/pages/acercade.html"
-                // Puedes agregar más palabras clave y rutas aquí
+                
             };
             var ruta = routes[keyword];
             if (ruta) {
